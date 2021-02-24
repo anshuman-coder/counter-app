@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 
+//stateless functional component
 
-
-
-class Navbar extends Component {
-    render() { 
-        return ( <nav className="navbar navbar-light bg-light">
+const Navbar = (props) => {
+    return ( 
+        <nav className="navbar navbar-light bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-              Navbar <span className="badge badge-pill badge-secondary">
-                  {this.props.totalCounter}
-                  </span>
+              Navbar{" "} 
+                <span className="badge badge-pill badge-secondary">
+                  {props.totalCounter}
+                </span>
             </a>
         </div>
-      </nav> );
-    }
+      </nav>
+     );
 }
  
-export default Navbar ;
+export default Navbar;
